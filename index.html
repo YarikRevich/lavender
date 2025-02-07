@@ -8,10 +8,26 @@
     <link rel="stylesheet" href="css/index.css" />
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/LetterY.svg/640px-LetterY.svg.png">
     <title>Lavender</title>
+
+    <script src="lib/artoolkit.min.js"></script>
+    <script src="lib/three.min.js"></script>
+    <script src="lib/artoolkit.three.js"></script>
+    <script src="lib/ar-gif.min.js" defer></script>
 </head>
 
 <body>
-    <img src="resources/cosmic-flowers.gif" alt="cosmic flowers" width="700" />
+    <ar-scene>
+        <ar-marker patt="resources/pattern-peixe.patt">
+            <ar-content src="resources/peixe.gif" scale="1.5 1.5" position="0 0 0" rotation="0 0 0">
+            </ar-content>
+        </ar-marker>
+    </ar-scene>
+
+    <!-- <img src="resources/cosmic-flowers.gif" alt="cosmic flowers" width="700" /> -->
 </body>
 
 </html>
+
+
+
+
