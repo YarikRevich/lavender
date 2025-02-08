@@ -14,19 +14,22 @@
     <script src="lib/artoolkit.three.js"></script>
     <script src="lib/ar-gif.min.js" defer></script>
     <script src="coi-serviceworker.js"></script>
+    <script src="js/index.js"></script>
 </head>
 
 <body>
-    <ar-scene>
-        <ar-marker patt="resources/pattern.patt">
-            <ar-content src="resources/cosmic-flowers.gif" scale="15 15" position="0 0 0" rotation="0 0 0">
-            </ar-content>
-        </ar-marker>
-    </ar-scene>
+    <div>
+        <ar-scene>
+            <div class="scene-click" id="scene-click" onclick="enableDynamicScene()"></div>
+            <ar-marker patt="resources/pattern.patt">
+                <ar-content id="static-scene" src="resources/cosmic-flowers.png" scale="20 20" position="0 0 0" rotation="0 0 0">
+                </ar-content>
+            </ar-marker>
+        </ar-scene>
+    </div>
+
+    <img onclick="enableStaticScene()" id="dynamic-scene" class="disabled" src="resources/cosmic-flowers.gif"
+        alt="cosmic flowers" />
 </body>
 
 </html>
-
-
-
-
